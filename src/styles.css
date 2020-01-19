@@ -4,7 +4,7 @@
 
  html,
  body {
-   overflow: hidden;
+   /* overflow: hidden; */
  }
  
  html,
@@ -27,14 +27,27 @@
 
  .hero {
    position: absolute;
+   border: 4px solid green;
  }
 
  .board {
    position: relative;
+   box-sizing: border-box;
    left: 0;
    top: 0;
    width: 100%;
    height: 70%;
    border: 2px solid red;
  }
+
+.map {
+  /* position: relative; */
+   box-sizing: border-box;
+   border: 5px solid aqua;
+}
+
+.virus {
+  background: green
+}
+
  

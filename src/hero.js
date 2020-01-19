@@ -1,12 +1,12 @@
-class Hero {
+import { Basis } from './basis.js'
+
+class Player extends Basis {
 
     constructor(options) {
+        super(options)
         this.name = options.name
-        this.width = options.width
-        this.height = options.height
+        this.hp = options.hp
         this.speed = options.speed
-        this.posX = options.posX
-        this.posY = options.posY
     }
 
     move(direction, speed) {
@@ -25,19 +25,16 @@ class Hero {
                 break;
         };
     }
-
-    render(el) {
-        el.style.top = this.posY + 'px';
-        el.style.left = this.posX + 'px';
-    }
-
 }
 
-export const hero = new Hero({
+export const player = new Player({
+    id: 'player1',
     name: 'Hero',
     width: 20,
     height: 20,
+    hp: 100,
     speed: 5,
     posX: 1,
     posY: 1
-}) 
+})
+
