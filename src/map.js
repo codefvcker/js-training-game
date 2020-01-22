@@ -1,9 +1,11 @@
 import { Basis } from './basis.js'
+import { virus, virus2, virus3, virus4, virus5 } from './virus.js'
 
 class Map extends Basis {
 
     constructor(options) {
         super(options)
+        this.level = options.level
     }
 
     create(className) {
@@ -15,7 +17,7 @@ class Map extends Basis {
         element.style.top = this.posY + 'px'
         element.style.width = this.width + '%'
         element.style.height = this.height + '%'
-        element.innerHTML = this.name
+        // element.innerHTML = this.name
         element.className = className
 
         board.append(element)
@@ -29,4 +31,5 @@ export const map = new Map({
     height: 100,
     posX: 0,
     posY: 0,
+    level: [virus, virus2, virus3, virus4, virus5]
 })

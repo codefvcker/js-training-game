@@ -5,8 +5,8 @@ class Player extends Basis {
     constructor(options) {
         super(options)
         this.name = options.name
-        this.hp = options.hp
         this.speed = options.speed
+        this.points = options.points
     }
 
     move(direction, speed) {
@@ -25,6 +25,14 @@ class Player extends Basis {
                 break;
         };
     }
+
+    addPoint() {
+        this.points++
+    }
+
+    pointsReset() {
+        this.points = 0
+    }
 }
 
 export const player = new Player({
@@ -32,8 +40,8 @@ export const player = new Player({
     name: 'Hero',
     width: 20,
     height: 20,
-    hp: 100,
-    speed: 5,
+    speed: 20,
+    points: 0,
     posX: 1,
     posY: 1
 })

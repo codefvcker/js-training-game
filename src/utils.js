@@ -10,14 +10,19 @@ export const create = Object.prototype.create = function (className) {
     element.style.top = this.posY + 'px'
     element.style.width = this.width + 'px'
     element.style.height = this.height + 'px'
-    element.innerHTML = this.name
     element.className = className
 
     board.append(element)
+
+    return element
 }
 
 export const render = Object.prototype.render = function (el) {
     el.style.top = this.posY + 'px';
     el.style.left = this.posX + 'px';
 }
+
+
+
+
 
