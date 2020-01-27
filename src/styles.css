@@ -1,33 +1,27 @@
-/**
- * Body CSS
- */
-
- html,
+ /* Common  */
+ 
  body {
    overflow: hidden;
- }
- 
- html,
- body,
- button {
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+   padding: 0;
+   margin: 0;
  }
  
  .container {
    box-sizing: border-box;
-   position: absolute;
+   position: relative;
    left: 0;
    top: 0;
    width: 100%;
    height: 100vh;
-   border: 2px solid blue;
  }
+
+  /* Game map, player */
 
  .hero {
    position: absolute;
-   border: 4px solid green;
+   border-radius: 50%;
+   background: red;
+   z-index: 999;
  }
 
  .board {
@@ -37,22 +31,16 @@
    top: 0;
    width: 100%;
    height: 70%;
-   border: 2px solid red;
  }
 
 .map {
-  /* position: relative; */
    box-sizing: border-box;
-   border: 5px solid aqua;
+   background: linear-gradient(90deg, #1FA2FF 0% , #12D8FA 50% , #A6FFCB 100% );
 }
 
 .virus {
-  background: green
+  background: green;
 }
-
- .lives {
-   color:red
- }
 
  .table {
    position: absolute;
@@ -66,12 +54,101 @@
    background: red;
  }
 
+/* Modal */
+
  .modal {
-   max-width: 300px;
-   max-height: 300px;
-   background: yellow;
+   width: 300px;
+   height: 300px;
+   background: linear-gradient(#16222A, #3A6073);
+   position: absolute;
+   margin: 0 auto;
+   color: #fff;
+   left: 0;
+   right: 0;
+   top: calc(50% - 150px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   overflow: hidden;
+ }
+
+ .modal button {
+   background: #3A6073;
+   border: 1px solid #fff;
+   color: #fff;
+   width: 150px;
+   height: 50px;
+   margin: 20px 0;
+ }
+
+ .modal button:hover {
+   background: rgba(255, 255, 255, .3);
+ }
+
+ /* Interface / controller */
+
+ .interface {
+   border: 2px solid green;
+   width: 100%;
+   height: 30%;
+   background: #274046;
+ }
+
+ .controller {
+   width: 300px;
+   height: 200px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
    position: relative;
-   color: red;
-   left: 400px;
-   top: 200px;
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+ }
+
+ .controller button {
+  background: #3A6073;
+  border: 1px solid #fff;
+  color: #fff;
+ }
+
+ .controller button:hover {
+  background: rgba(255, 255, 255, .3);
+ }
+
+ .controller * {
+  margin-bottom: 5px;
+ }
+
+ .ct__wrap {
+   width: 100%;
+   height: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+ }
+
+ .cd__wrap {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+ }
+
+ #controller-top {
+  width: 70px; 
+ }
+
+ .cd__wrap * {
+  width: 70px;
+ }
+
+ #save-results {
+  height: 30px;
+ }
+
+ #show-records {
+  height: 30px;
  }

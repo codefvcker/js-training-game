@@ -181,4 +181,3 @@ function showRecords(data) {
 
     return `<ul>${items}</ul>`;
 }
-

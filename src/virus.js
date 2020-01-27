@@ -13,7 +13,7 @@ export const virus = new Virus({
     width: 30,
     height: 300,
     posX: 150,
-    posY: 200,
+    posY: 205,
 })
 
 export const virus2 = new Virus({
@@ -26,16 +26,16 @@ export const virus2 = new Virus({
 
 export const virus3 = new Virus({
     id: 'virus3',
-    width: 30,
-    height: 300,
+    width: 50,
+    height: 350,
     posX: 350,
-    posY: 200,
+    posY: 155,
 })
 
 export const virus4 = new Virus({
     id: 'virus4',
-    width: 30,
-    height: 300,
+    width: 70,
+    height: 400,
     posX: 550,
     posY: 0,
 })
@@ -43,8 +43,8 @@ export const virus4 = new Virus({
 export const virus5 = new Virus({
     id: 'virus5',
     width: 30,
-    height: 300,
+    height: 325,
     posX: 750,
-    posY: 200,
+    posY: 180,
 })
 

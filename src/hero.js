@@ -38,8 +38,8 @@ class Player extends Basis {
 export const player = new Player({
     id: 'player1',
     name: 'Hero',
-    width: 20,
-    height: 20,
+    width: 40,
+    height: 40,
     speed: 20,
     points: 0,
     posX: 1,
